@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -131,8 +130,7 @@
   }
 
   .skill-progress-fill {
-    @apply absolute top-0 left-0 h-full animate-progress-fill;
-    background-color: var(--theme-skill-color-light, #4D9DE0);
+    @apply absolute top-0 left-0 h-full transition-all duration-1500 ease-out;
   }
 
   .dark .skill-progress-fill {

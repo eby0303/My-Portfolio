@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
   }, []);
   
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-20 dark:bg-gradient-to-r dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 bg-gray-50">
       <div className="container mx-auto px-4" ref={projectsRef}>
         <h2 className="section-heading text-center mx-auto mb-4 text-gray-800 dark:text-gray-100">My Projects</h2>
         <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto mb-12">
@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title}
-              className={`project-card overflow-hidden border-none shadow-lg opacity-0 translate-y-10 transition-all duration-500 dark:bg-gray-800`}
+              className={`project-card overflow-hidden border-none shadow-lg opacity-0 translate-y-10 transition-all duration-500 dark:bg-gray-800/80 dark:backdrop-blur-sm`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className={`${project.bgColor} ${project.darkBgColor} h-3`}></div>

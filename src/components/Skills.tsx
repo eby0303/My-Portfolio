@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
           const el = entry.target as HTMLElement;
           const percentage = el.dataset.percentage;
           if (percentage) {
-            el.style.setProperty('--progress-width', `${percentage}%`);
+            el.style.width = `${percentage}%`;
           }
         }
       });
@@ -71,9 +71,10 @@ const Skills: React.FC = () => {
                 </div>
                 <div className="skill-progress-bar dark:bg-gray-700">
                   <div 
-                    className="skill-progress-fill dark:opacity-90" 
+                    className="skill-progress-fill dark:opacity-90 h-full rounded-full" 
                     data-percentage={skill.percentage}
                     style={{ 
+                      width: '0%',
                       backgroundColor: `var(--theme-skill-color-${index})`,
                       '--theme-skill-color-light': skill.color,
                       '--theme-skill-color-dark': skill.darkColor,

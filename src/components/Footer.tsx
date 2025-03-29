@@ -4,8 +4,9 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="bg-gray-800 dark:bg-gray-950 text-white py-12 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-portfolio-blue via-portfolio-teal to-portfolio-coral opacity-80"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#hero" className="text-3xl font-bold">
@@ -49,19 +50,19 @@ const Footer: React.FC = () => {
               <div className="flex space-x-4">
                 <a 
                   href="#" 
-                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-teal hover:text-white transition-colors"
+                  className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Github size={20} />
                 </a>
                 <a 
                   href="#" 
-                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-teal hover:text-white transition-colors"
+                  className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a 
                   href="#" 
-                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-teal hover:text-white transition-colors"
+                  className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Mail size={20} />
                 </a>
@@ -76,7 +77,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-10 pt-6 border-t border-gray-800 text-center text-gray-500">
+        <div className="mt-10 pt-6 border-t border-gray-700 text-center text-gray-500">
           <p>© {new Date().getFullYear()} eby. All rights reserved.</p>
         </div>
       </div>
