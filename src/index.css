@@ -130,7 +130,7 @@
   }
 
   .skill-progress-fill {
-    @apply absolute top-0 left-0 h-full transition-all duration-1500 ease-out;
+    @apply absolute top-0 left-0 h-full transition-all duration-1000 ease-out;
   }
 
   .dark .skill-progress-fill {

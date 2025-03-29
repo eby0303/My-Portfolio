@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,7 +52,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Updated colors for the portfolio
 				portfolio: {
 					teal: '#20BDBE',
 					coral: '#FF6B6B',
@@ -178,6 +176,9 @@ export default {
 				'fade-in-left': 'fade-in-left 0.7s ease-out',
 				'fade-in-right': 'fade-in-right 0.7s ease-out',
 				'progress-fill': 'progress-fill 1.5s ease-out forwards'
+			},
+			transitionDuration: {
+				'1500': '1500ms'
 			}
 		}
 	},
