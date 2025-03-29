@@ -132,6 +132,11 @@
 
   .skill-progress-fill {
     @apply absolute top-0 left-0 h-full animate-progress-fill;
+    background-color: var(--theme-skill-color-light, #4D9DE0);
+  }
+
+  .dark .skill-progress-fill {
+    background-color: var(--theme-skill-color-dark, #7FE0DF);
   }
 
   .project-card {

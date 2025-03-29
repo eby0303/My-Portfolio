@@ -11,6 +11,7 @@ interface Project {
   githubUrl: string;
   demoUrl?: string;
   bgColor: string;
+  darkBgColor: string;
 }
 
 const Projects: React.FC = () => {
@@ -23,14 +24,16 @@ const Projects: React.FC = () => {
       tags: ["Python", "Streamlit", "Pandas", "Data Visualization"],
       githubUrl: "https://github.com/username/data-viz-dashboard",
       demoUrl: "#",
-      bgColor: "bg-gradient-to-br from-portfolio-blue to-portfolio-teal"
+      bgColor: "bg-gradient-to-br from-portfolio-blue to-portfolio-teal",
+      darkBgColor: "dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900"
     },
     {
       title: "Machine Learning Model Deployment",
       description: "End-to-end ML pipeline for predicting housing prices with automated data preprocessing, model training and evaluation.",
       tags: ["ML", "Python", "Scikit-learn", "Docker"],
       githubUrl: "https://github.com/username/ml-model-deployment",
-      bgColor: "bg-gradient-to-br from-portfolio-purple to-portfolio-indigo"
+      bgColor: "bg-gradient-to-br from-portfolio-purple to-portfolio-indigo",
+      darkBgColor: "dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900"
     },
     {
       title: "Sales Analytics Tool",
@@ -38,14 +41,16 @@ const Projects: React.FC = () => {
       tags: ["Power BI", "Excel", "Data Analysis"],
       githubUrl: "https://github.com/username/sales-analytics-tool",
       demoUrl: "#",
-      bgColor: "bg-gradient-to-br from-portfolio-pink to-portfolio-purple"
+      bgColor: "bg-gradient-to-br from-portfolio-pink to-portfolio-purple",
+      darkBgColor: "dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900"
     },
     {
       title: "Customer Segmentation Analysis",
       description: "Unsupervised learning project to identify customer segments and provide targeted marketing insights.",
       tags: ["Clustering", "Python", "Pandas", "Matplotlib"],
       githubUrl: "https://github.com/username/customer-segmentation",
-      bgColor: "bg-gradient-to-br from-portfolio-teal to-portfolio-blue"
+      bgColor: "bg-gradient-to-br from-portfolio-teal to-portfolio-blue",
+      darkBgColor: "dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900"
     },
   ];
   
@@ -68,10 +73,10 @@ const Projects: React.FC = () => {
   }, []);
   
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4" ref={projectsRef}>
-        <h2 className="section-heading text-center mx-auto mb-4">My Projects</h2>
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        <h2 className="section-heading text-center mx-auto mb-4 text-gray-800 dark:text-gray-100">My Projects</h2>
+        <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto mb-12">
           Check out some of my recent data science and software engineering projects
         </p>
         
@@ -79,20 +84,20 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title}
-              className="project-card overflow-hidden border-none shadow-lg opacity-0 translate-y-10 transition-all duration-500"
+              className={`project-card overflow-hidden border-none shadow-lg opacity-0 translate-y-10 transition-all duration-500 dark:bg-gray-800`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className={`${project.bgColor} h-3`}></div>
+              <div className={`${project.bgColor} ${project.darkBgColor} h-3`}></div>
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardTitle className="text-gray-800 dark:text-gray-100">{project.title}</CardTitle>
+                <CardDescription className="text-gray-600 dark:text-gray-300">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.tags.map(tag => (
                     <span 
                       key={tag} 
-                      className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-700"
+                      className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200"
                     >
                       {tag}
                     </span>
@@ -103,7 +108,7 @@ const Projects: React.FC = () => {
                 <Button 
                   variant="outline" 
                   size="sm"
-                  className="flex items-center gap-1"
+                  className="flex items-center gap-1 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700"
                   asChild
                 >
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -114,7 +119,7 @@ const Projects: React.FC = () => {
                 {project.demoUrl && (
                   <Button 
                     size="sm"
-                    className="flex items-center gap-1 bg-portfolio-purple hover:bg-portfolio-indigo"
+                    className="flex items-center gap-1 bg-portfolio-teal hover:bg-portfolio-blue dark:bg-portfolio-blue dark:hover:bg-portfolio-teal"
                     asChild
                   >
                     <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
@@ -130,7 +135,7 @@ const Projects: React.FC = () => {
         
         <div className="text-center mt-12">
           <Button
-            className="bg-portfolio-purple hover:bg-portfolio-indigo text-white px-6 py-2 rounded-lg btn-hover-effect"
+            className="bg-portfolio-teal hover:bg-portfolio-blue text-white dark:bg-portfolio-blue dark:hover:bg-portfolio-teal px-6 py-2 rounded-lg btn-hover-effect"
             asChild
           >
             <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">

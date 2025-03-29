@@ -12,7 +12,7 @@ const Skills: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   
   const technicalSkills: Skill[] = [
-    { name: 'Python', percentage: 85, color: '#4D9DE0', darkColor: '#4D9DE0' },
+    { name: 'Python', percentage: 85, color: '#4D9DE0', darkColor: '#7FE0DF' },
     { name: 'Data Analysis', percentage: 80, color: '#20BDBE', darkColor: '#7FE0DF' },
     { name: 'Data Visualization', percentage: 75, color: '#FF6B6B', darkColor: '#FF6B6B' },
     { name: 'Power BI', percentage: 70, color: '#1A5F9C', darkColor: '#4D9DE0' },
@@ -69,13 +69,15 @@ const Skills: React.FC = () => {
                   <span className="font-semibold dark:text-white">{skill.name}</span>
                   <span className="text-gray-600 dark:text-gray-400">{skill.percentage}%</span>
                 </div>
-                <div className="skill-progress-bar">
+                <div className="skill-progress-bar dark:bg-gray-700">
                   <div 
                     className="skill-progress-fill dark:opacity-90" 
                     data-percentage={skill.percentage}
                     style={{ 
                       backgroundColor: `var(--theme-skill-color-${index})`,
-                    }}
+                      '--theme-skill-color-light': skill.color,
+                      '--theme-skill-color-dark': skill.darkColor,
+                    } as React.CSSProperties}
                   ></div>
                 </div>
               </div>

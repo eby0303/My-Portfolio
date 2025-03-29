@@ -11,7 +11,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 
 const Index = () => {
   return (
-    <ThemeProvider defaultTheme="light">
+    <ThemeProvider defaultTheme="dark">
       <div className="min-h-screen">
         <Navbar />
         <Hero />
