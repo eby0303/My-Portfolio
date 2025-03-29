@@ -24,14 +24,13 @@ const Skills: React.FC = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-progress-fill');
+          const progressBar = entry.target as HTMLElement;
+          const percentage = progressBar.dataset.percentage || "0";
           
-          // Set the custom property for the width based on the data attribute
-          const el = entry.target as HTMLElement;
-          const percentage = el.dataset.percentage;
-          if (percentage) {
-            el.style.width = `${percentage}%`;
-          }
+          // Set the width directly with a slight delay for visual effect
+          setTimeout(() => {
+            progressBar.style.width = `${percentage}%`;
+          }, 100);
         }
       });
     }, { threshold: 0.1 });
@@ -71,11 +70,10 @@ const Skills: React.FC = () => {
                 </div>
                 <div className="skill-progress-bar dark:bg-gray-700">
                   <div 
-                    className="skill-progress-fill dark:opacity-90 h-full rounded-full" 
+                    className="skill-progress-fill" 
                     data-percentage={skill.percentage}
                     style={{ 
                       width: '0%',
-                      backgroundColor: `var(--theme-skill-color-${index})`,
                       '--theme-skill-color-light': skill.color,
                       '--theme-skill-color-dark': skill.darkColor,
                     } as React.CSSProperties}
