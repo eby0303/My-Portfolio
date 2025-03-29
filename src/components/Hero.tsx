@@ -37,19 +37,19 @@ const Hero: React.FC = () => {
       
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-down">
-            Hi, I'm <span className="hero-gradient-text">Eby</span> – 
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-down dark:text-white">
+            Hi, I'm <span className="hero-gradient-text">eby</span> – 
             <br className="md:hidden" /> Data Science Enthusiast & <br className="hidden md:block" />
             Software Engineer
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 leading-relaxed text-gray-700 animate-fade-in-up animation-delay-300">
+          <p className="text-xl md:text-2xl mb-8 leading-relaxed text-gray-700 dark:text-gray-300 animate-fade-in-up animation-delay-300">
             Transforming complex data into actionable insights with creativity and precision.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-600">
             <Button 
-              className="bg-portfolio-purple hover:bg-portfolio-indigo text-white px-8 py-6 rounded-lg btn-hover-effect text-lg"
+              className="bg-portfolio-teal hover:bg-portfolio-blue dark:bg-portfolio-blue dark:hover:bg-portfolio-teal text-white px-8 py-6 rounded-lg btn-hover-effect text-lg"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View My Projects
@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
             
             <Button 
               variant="outline"
-              className="border-portfolio-purple text-portfolio-purple hover:bg-portfolio-purple/10 px-8 py-6 rounded-lg btn-hover-effect text-lg"
+              className="border-portfolio-teal text-portfolio-teal dark:border-portfolio-lightTeal dark:text-portfolio-lightTeal hover:bg-portfolio-teal/10 dark:hover:bg-portfolio-lightTeal/10 px-8 py-6 rounded-lg btn-hover-effect text-lg"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               About Me
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full w-12 h-12 border-2 border-portfolio-purple text-portfolio-purple"
+            className="rounded-full w-12 h-12 border-2 border-portfolio-teal dark:border-portfolio-lightTeal text-portfolio-teal dark:text-portfolio-lightTeal"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <ArrowDown size={24} />

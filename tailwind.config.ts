@@ -53,13 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom colors for the portfolio
+				// Updated colors for the portfolio
 				portfolio: {
-					blue: '#4361EE',
-					indigo: '#3A0CA3',
-					purple: '#7209B7',
-					pink: '#F72585',
-					teal: '#4CC9F0',
+					teal: '#20BDBE',
+					coral: '#FF6B6B',
+					blue: '#4D9DE0',
+					darkBlue: '#1A5F9C',
+					lightTeal: '#7FE0DF',
 					dark: '#0F172A',
 				},
 				sidebar: {

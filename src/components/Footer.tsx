@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#hero" className="text-3xl font-bold">
-              Eby<span className="text-portfolio-purple">.</span>
+              eby<span className="text-portfolio-coral">.</span>
             </a>
             <p className="mt-2 text-gray-400 max-w-xs">
               Data Science Enthusiast & Software Engineer transforming complex data into actionable insights.
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4 relative inline-block">
                 Quick Links
-                <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-portfolio-purple"></span>
+                <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-portfolio-teal"></span>
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -44,31 +44,31 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4 relative inline-block">
                 Connect
-                <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-portfolio-purple"></span>
+                <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-portfolio-teal"></span>
               </h3>
               <div className="flex space-x-4">
                 <a 
                   href="#" 
-                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-purple hover:text-white transition-colors"
+                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Github size={20} />
                 </a>
                 <a 
                   href="#" 
-                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-purple hover:text-white transition-colors"
+                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a 
                   href="#" 
-                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-purple hover:text-white transition-colors"
+                  className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Mail size={20} />
                 </a>
               </div>
               <p className="mt-4 text-gray-400">
                 Feel free to reach out!<br />
-                <a href="mailto:eby@example.com" className="hover:text-portfolio-purple transition-colors">
+                <a href="mailto:eby@example.com" className="hover:text-portfolio-teal transition-colors">
                   eby@example.com
                 </a>
               </p>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="mt-10 pt-6 border-t border-gray-800 text-center text-gray-500">
-          <p>© {new Date().getFullYear()} Eby. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} eby. All rights reserved.</p>
         </div>
       </div>
     </footer>
