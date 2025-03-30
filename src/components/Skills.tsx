@@ -12,12 +12,12 @@ const Skills: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   
   const technicalSkills: Skill[] = [
-    { name: 'Python', percentage: 85, color: '#4D9DE0', darkColor: '#7FE0DF' },
+    { name: 'Python', percentage: 80, color: '#4D9DE0', darkColor: '#7FE0DF' },
     { name: 'Data Analysis', percentage: 80, color: '#20BDBE', darkColor: '#7FE0DF' },
-    { name: 'Data Visualization', percentage: 75, color: '#FF6B6B', darkColor: '#FF6B6B' },
-    { name: 'Power BI', percentage: 70, color: '#1A5F9C', darkColor: '#4D9DE0' },
-    { name: 'Excel', percentage: 90, color: '#7FE0DF', darkColor: '#20BDBE' },
-    { name: 'Machine Learning', percentage: 65, color: '#20BDBE', darkColor: '#7FE0DF' },
+    { name: 'Backend', percentage: 75, color: '#FF6B6B', darkColor: '#FF6B6B' },
+    { name: 'Web Development', percentage: 75, color: '#1A5F9C', darkColor: '#4D9DE0' },
+    { name: 'Excel', percentage: 60, color: '#7FE0DF', darkColor: '#20BDBE' },
+    { name: 'Machine Learning', percentage: 75, color: '#20BDBE', darkColor: '#7FE0DF' },
   ];
   
   useEffect(() => {
@@ -84,7 +84,7 @@ const Skills: React.FC = () => {
           </div>
           
           <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6">
-            {['Data Cleaning', 'Statistical Analysis', 'SQL', 'R', 'Tableau', 'Pandas'].map((skill, index) => (
+            {['Data Mining', 'React', 'SQL/MongoDB', 'Next.js', 'Streamlit', 'Node'].map((skill, index) => (
               <div 
                 key={skill}
                 className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 shadow-sm hover:shadow-md opacity-0 translate-y-10 transition-all duration-500 text-center"

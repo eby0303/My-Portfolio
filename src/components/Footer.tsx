@@ -49,19 +49,19 @@ const Footer: React.FC = () => {
               </h3>
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                  href="https://github.com/eby0303" 
                   className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Github size={20} />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/eby0303/" 
                   className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="#" 
+                  href="mailto:eby0303@gmail.com" 
                   className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-portfolio-teal hover:text-white transition-colors"
                 >
                   <Mail size={20} />
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
               <p className="mt-4 text-gray-400">
                 Feel free to reach out!<br />
                 <a href="mailto:eby@example.com" className="hover:text-portfolio-teal transition-colors">
-                  eby@example.com
+                  eby0303@gmail.com
                 </a>
               </p>
             </div>
